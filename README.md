@@ -9,7 +9,7 @@ In principle, if you want to install this package, here are the steps you should
 1. Clone this repository wherever you clone your repositories (`git clone https://github.com/BayesForDays/coronada.git`)
 2. Go to the cloned directory (`cd ./coronada/`)
 3. Create a new [virtual environment](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html) in the repository directory and activate it. 
-4. Install this package with `pip`: `pip install -e . --upgrade --user`
+4. Install this package with `pip`: `pip install -e . --upgrade`
 5. Enjoy! (Do not profit! Don't be a jerk.)
 
 ### 👑 Scraping process 👑
