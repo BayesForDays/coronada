@@ -33,6 +33,13 @@ If you are fancy, you can add e.g. different stopping criteria. However, I don't
 
 The sky's the limit! There are some tricky components to the Twitter API, namely how it handles quote tweets, retweets, and tweets over a certain length. [More information about Tweepy's capabilities can be found here](http://docs.tweepy.org/en/latest/api.html#tweepy-api-twitter-api-wrapper).
 
+With `reagent.py`, you can extract Tweet data by JSON path.  It
+prints the result to the command line.
+
+```
+python reagent.py --jsonfile [json file] --extractpaths tag,tag2:subtag1,... > /path/to/output.txt
+```
+
 ### 👑 Reproducibility and Data Privacy 👑
 
 Because of privacy laws (e.g. in case a user locks their account), I am only able to provide tweet ids to you in `mar14-tweets.txt`. If you want to scrape these specific tweets, the tweepy interface allows you to do so fairly trivially.
