@@ -21,15 +21,15 @@ class Covid19Listener(tw.StreamListener):
 @click.option('--access_token')
 @click.option('--access_token_secret')
 @click.option('--terms')
-def swab(consumer_key: str, consumer_secret: str, access_token: str, access_token_secret: str, terms: str):
+@click.option('--languages')
+def swab(consumer_key: str, consumer_secret: str, access_token: str, access_token_secret: str, terms: str, languages: str):
         auth = tw.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
         api = tw.API(auth, wait_on_rate_limit=True, 
                      wait_on_rate_limit_notify=True, retry_delay=10)
         listener = Covid19Listener()
         stream = tw.Stream(auth = api.auth, listener=listener)
-        stream.filter(track=terms.split(","), languages=['en'])
-
+        stream.filter(track=terms.split(","), languages=languages.split(","))
 
 if __name__=="__main__":
         swab()
